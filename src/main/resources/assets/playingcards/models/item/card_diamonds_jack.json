@@ -1,0 +1,8 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "playingcards:items/plain_card",
+    "layer1": "playingcards:items/suits/diamonds/ace",
+    "layer2": "playingcards:items/red/jack"
+  }
+}
