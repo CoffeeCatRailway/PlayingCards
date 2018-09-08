@@ -1,0 +1,64 @@
+# Items
+item.playing_card.name=Plain Card
+
+item.jocker_black.name=Black Jocker
+item.jocker_red.name=Red Jocker
+
+item.card_spades_ace.name=Ace of Spades
+item.card_spades_two.name=Two of Spades
+item.card_spades_three.name=Three of Spades
+item.card_spades_four.name=Four of Spades
+item.card_spades_five.name=Five of Spades
+item.card_spades_six.name=Six of Spades
+item.card_spades_seven.name=Seven of Spades
+item.card_spades_eight.name=Eight of Spades
+item.card_spades_nine.name=Nine of Spades
+item.card_spades_ten.name=Ten of Spades
+item.card_spades_jack.name=Jack of Spades
+item.card_spades_queen.name=Queen of Spades
+item.card_spades_king.name=King of Spades
+
+item.card_diamonds_ace.name=Ace of Diamonds
+item.card_diamonds_two.name=Two of Diamonds
+item.card_diamonds_three.name=Three of Diamonds
+item.card_diamonds_four.name=Four of Diamonds
+item.card_diamonds_five.name=Five of Diamonds
+item.card_diamonds_six.name=Six of Diamonds
+item.card_diamonds_seven.name=Seven of Diamonds
+item.card_diamonds_eight.name=Eight of Diamonds
+item.card_diamonds_nine.name=Nine of Diamonds
+item.card_diamonds_ten.name=Ten of Diamonds
+item.card_diamonds_jack.name=Jack of Diamonds
+item.card_diamonds_queen.name=Queen of Diamonds
+item.card_diamonds_king.name=King of Diamonds
+
+item.card_clubs_ace.name=Ace of Clubs
+item.card_clubs_two.name=Two of Clubs
+item.card_clubs_three.name=Three of Clubs
+item.card_clubs_four.name=Four of Clubs
+item.card_clubs_five.name=Five of Clubs
+item.card_clubs_six.name=Six of Clubs
+item.card_clubs_seven.name=Seven of Clubs
+item.card_clubs_eight.name=Eight of Clubs
+item.card_clubs_nine.name=Nine of Clubs
+item.card_clubs_ten.name=Ten of Clubs
+item.card_clubs_jack.name=Jack of Clubs
+item.card_clubs_queen.name=Queen of Clubs
+item.card_clubs_king.name=King of Clubs
+
+item.card_hearts_ace.name=Ace of Hearts
+item.card_hearts_two.name=Two of Hearts
+item.card_hearts_three.name=Three of Hearts
+item.card_hearts_four.name=Four of Hearts
+item.card_hearts_five.name=Five of Hearts
+item.card_hearts_six.name=Six of Hearts
+item.card_hearts_seven.name=Seven of Hearts
+item.card_hearts_eight.name=Eight of Hearts
+item.card_hearts_nine.name=Nine of Hearts
+item.card_hearts_ten.name=Ten of Hearts
+item.card_hearts_jack.name=Jack of Hearts
+item.card_hearts_queen.name=Queen of Hearts
+item.card_hearts_king.name=King of Hearts
+
+# tabs
+itemGroup.playingcardstab=Playing Cards

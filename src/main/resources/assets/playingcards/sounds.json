@@ -1,0 +1,5 @@
+{
+  "card_throw": {
+    "sounds": [ {"name": "playingcards:card_throw"}]
+  }
+}
