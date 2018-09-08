@@ -60,5 +60,8 @@ item.card_hearts_jack.name=Jack of Hearts
 item.card_hearts_queen.name=Queen of Hearts
 item.card_hearts_king.name=King of Hearts
 
+# Entities
+entity.ridable_card.name=Ridable Card
+
 # tabs
 itemGroup.playingcardstab=Playing Cards
