@@ -2,8 +2,6 @@ package coffeecatteam.playingcards.objects.entities.render;
 
 import coffeecatteam.playingcards.objects.entities.EntityRidableCard;
 import com.mrcrayfish.vehicle.client.render.RenderLandVehicle;
-import com.mrcrayfish.vehicle.client.render.RenderVehicle;
-import com.mrcrayfish.vehicle.client.render.Wheel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -58,7 +56,7 @@ public class RenderRidableCard extends RenderLandVehicle<EntityRidableCard> {
 
             // Extra detail
             float currentSpeedNormal = (vehicle.prevCurrentSpeed + (vehicle.currentSpeed - vehicle.prevCurrentSpeed) * partialTicks) / vehicle.getMaxSpeed();
-            float turnAngleNormal = ((float)vehicle.prevTurnAngle + (float)(vehicle.turnAngle - vehicle.prevTurnAngle) * partialTicks) / 45.0F;
+            float turnAngleNormal = ((float) vehicle.prevTurnAngle + (float) (vehicle.turnAngle - vehicle.prevTurnAngle) * partialTicks) / 45.0F;
             GlStateManager.rotate(turnAngleNormal * currentSpeedNormal * -15.0F, 0.0F, 0.0F, 1.0F);
 
 //            // Spin spin

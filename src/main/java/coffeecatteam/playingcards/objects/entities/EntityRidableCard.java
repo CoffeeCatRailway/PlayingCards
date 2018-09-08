@@ -2,19 +2,14 @@ package coffeecatteam.playingcards.objects.entities;
 
 import coffeecatteam.playingcards.Reference;
 import coffeecatteam.playingcards.init.InitItem;
-import coffeecatteam.playingcards.util.CardProperties;
-import com.mrcrayfish.vehicle.entity.EngineType;
 import com.mrcrayfish.vehicle.entity.EntityLandVehicle;
-import com.mrcrayfish.vehicle.entity.EntityVehicle;
 import com.mrcrayfish.vehicle.init.ModItems;
-import com.mrcrayfish.vehicle.init.ModSounds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 import java.util.Random;
@@ -37,7 +32,7 @@ public class EntityRidableCard extends EntityLandVehicle {
     @Override
     public void entityInit() {
         super.entityInit();
-        this.dataManager.register(CARD, Reference.MODID + ":" + InitItem.CARDS.get(new Random().nextInt(InitItem.CARDS.size()-1)).getUnlocalizedName().substring(5));
+        this.dataManager.register(CARD, Reference.MODID + ":" + InitItem.CARDS.get(new Random().nextInt(InitItem.CARDS.size() - 1)).getUnlocalizedName().substring(5));
 
         this.spinAngle = this.turnAngle;
 

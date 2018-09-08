@@ -8,16 +8,16 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ProxyCommon {
 
-	public void preInit(FMLPreInitializationEvent event) {
-		InitItem.init();
-		InitEntity.init();
-	}
-	
-	public void init(FMLInitializationEvent event) {
-		
-	}
-	
-	public void postInit(FMLPostInitializationEvent event) {
-		
-	}
+    public void preInit(FMLPreInitializationEvent event) {
+        InitItem.init();
+        InitEntity.init();
+    }
+
+    public void init(FMLInitializationEvent event) {
+
+    }
+
+    public void postInit(FMLPostInitializationEvent event) {
+
+    }
 }

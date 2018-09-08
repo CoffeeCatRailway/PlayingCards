@@ -14,19 +14,19 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ProxyClient extends ProxyCommon {
 
-	public void preInit(FMLPreInitializationEvent event) {
-		super.preInit(event);
+    public void preInit(FMLPreInitializationEvent event) {
+        super.preInit(event);
         RenderingRegistry.registerEntityRenderingHandler(EntityRidableCard.class, RenderRidableCard::new);
-	}
-	
-	public void init(FMLInitializationEvent event) {
-		super.init(event);
+    }
+
+    public void init(FMLInitializationEvent event) {
+        super.init(event);
         RenderManager renderManager = Minecraft.getMinecraft().getRenderManager();
         RenderingRegistry.registerEntityRenderingHandler(EntityCardThrowing.class, new RenderCard(renderManager, Minecraft.getMinecraft().getRenderItem()));
         RenderingRegistry.registerEntityRenderingHandler(EntityCardMagic.class, new RenderCard(renderManager, Minecraft.getMinecraft().getRenderItem()));
-	}
-	
-	public void postInit(FMLPostInitializationEvent event) {
-		super.postInit(event);
-	}
+    }
+
+    public void postInit(FMLPostInitializationEvent event) {
+        super.postInit(event);
+    }
 }
