@@ -29,6 +29,7 @@ public class RenderRidableCard extends RenderLandVehicle<EntityRidableCard> {
 //        wheels.add(new Wheel(Wheel.Side.RIGHT, Wheel.Position.FRONT, xOffset, zOffsetFront, 1.4F));
 //        wheels.add(new Wheel(Wheel.Side.LEFT, Wheel.Position.REAR, xOffset, zOffsetRear, 1.4F));
 //        wheels.add(new Wheel(Wheel.Side.RIGHT, Wheel.Position.REAR, xOffset, zOffsetRear, 1.4F));
+        this.setEnginePosition(0f, 8f, -8f, 180f, 1f);
     }
 
     @Nullable

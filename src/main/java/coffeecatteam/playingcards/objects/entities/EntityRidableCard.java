@@ -4,12 +4,14 @@ import coffeecatteam.playingcards.Reference;
 import coffeecatteam.playingcards.init.InitItem;
 import com.mrcrayfish.vehicle.entity.EntityLandVehicle;
 import com.mrcrayfish.vehicle.init.ModItems;
+import com.mrcrayfish.vehicle.init.ModSounds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 import java.util.Random;
@@ -43,17 +45,26 @@ public class EntityRidableCard extends EntityLandVehicle {
 
     @Override
     public SoundEvent getMovingSound() {
-        return null;
+        return ModSounds.ATV_ENGINE_MONO;
     }
 
     @Override
     public SoundEvent getRidingSound() {
-        return null;
+        return ModSounds.ATV_ENGINE_STEREO;
     }
 
     @Override
     public boolean shouldRenderEngine() {
-        return false;
+        return true;
+    }
+
+    @Override
+    public boolean shouldShowEngineSmoke() {
+        return true;
+    }
+
+    public Vec3d getEngineSmokePosition() {
+        return new Vec3d(0.0D, 0.55D, -0.8D);
     }
 
     @Override
@@ -76,6 +87,7 @@ public class EntityRidableCard extends EntityLandVehicle {
         return false;
     }
 
+    @Override
     protected void readEntityFromNBT(NBTTagCompound compound) {
         super.readEntityFromNBT(compound);
 
@@ -84,6 +96,7 @@ public class EntityRidableCard extends EntityLandVehicle {
         }
     }
 
+    @Override
     protected void writeEntityToNBT(NBTTagCompound compound) {
         super.writeEntityToNBT(compound);
 
