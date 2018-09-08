@@ -2,6 +2,7 @@ package coffeecatteam.playingcards.objects.entities.render;
 
 import coffeecatteam.playingcards.objects.entities.EntityRidableCard;
 import com.mrcrayfish.vehicle.client.render.RenderLandVehicle;
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -9,6 +10,7 @@ import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
@@ -79,8 +81,12 @@ public class RenderRidableCard extends RenderLandVehicle<EntityRidableCard> {
 
                 float scale = 2.0F;
                 GlStateManager.scale(scale, scale, scale / 2);
-                ItemStack body = new ItemStack(Item.getByNameOrId(vehicle.getCard()));
-                Minecraft.getMinecraft().getRenderItem().renderItem(body, ItemCameraTransforms.TransformType.NONE);
+                ItemStack stack = vehicle.getCard();
+                if (stack.getItem() instanceof ItemBlock) {
+                    GlStateManager.rotate(-90.0F, 1, 0, 0);
+                    GlStateManager.rotate(90.0F, 0, 1, 0);
+                }
+                Minecraft.getMinecraft().getRenderItem().renderItem(stack, ItemCameraTransforms.TransformType.NONE);
             }
             GlStateManager.popMatrix();
 

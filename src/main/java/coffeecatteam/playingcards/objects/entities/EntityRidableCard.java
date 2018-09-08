@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class EntityRidableCard extends EntityLandVehicle {
 
-    private static final DataParameter<String> CARD;
+    private static final DataParameter<ItemStack> CARD = EntityDataManager.createKey(EntityRidableCard.class, DataSerializers.ITEM_STACK);
 
     public float spinAngle;
 
@@ -32,12 +32,11 @@ public class EntityRidableCard extends EntityLandVehicle {
     @Override
     public void entityInit() {
         super.entityInit();
-        this.dataManager.register(CARD, Reference.MODID + ":" + InitItem.CARDS.get(new Random().nextInt(InitItem.CARDS.size() - 1)).getUnlocalizedName().substring(5));
+        this.dataManager.register(CARD, new ItemStack(InitItem.CARDS.get(new Random().nextInt(InitItem.CARDS.size() - 1))));
 
         this.spinAngle = this.turnAngle;
-
         if (world.isRemote) {
-            body = new ItemStack(InitItem.PLAYING_CARD);
+            body = this.getCard();
             wheel = new ItemStack(ModItems.WHEEL);
         }
     }
@@ -78,30 +77,26 @@ public class EntityRidableCard extends EntityLandVehicle {
     }
 
     protected void readEntityFromNBT(NBTTagCompound compound) {
+        super.readEntityFromNBT(compound);
+
         if (compound.hasKey("card")) {
-            this.setCard(compound.getString("card"));
+            this.setCard(new ItemStack(compound.getCompoundTag("card")));
         }
     }
 
     protected void writeEntityToNBT(NBTTagCompound compound) {
-        if (this.getCard() != null)
-            compound.setString("card", this.getCard());
-        else
-            compound.setString("card", Reference.MODID + ":" + InitItem.PLAYING_CARD.getUnlocalizedName());
+        super.writeEntityToNBT(compound);
+
+        NBTTagCompound cardCompund = new NBTTagCompound();
+        this.getCard().writeToNBT(cardCompund);
+        compound.setTag("card", cardCompund);
     }
 
-    public void setCard(String card) {
+    public void setCard(ItemStack card) {
         this.dataManager.set(CARD, card);
     }
 
-    public String getCard() {
-        String domain = this.dataManager.get(CARD).split(":")[0];
-        if (domain.equals(Reference.MODID))
-            return this.dataManager.get(CARD);
-        return Reference.MODID + ":" + InitItem.PLAYING_CARD.getUnlocalizedName();
-    }
-
-    static {
-        CARD = EntityDataManager.createKey(EntityRidableCard.class, DataSerializers.STRING);
+    public ItemStack getCard() {
+        return this.dataManager.get(CARD);
     }
 }
