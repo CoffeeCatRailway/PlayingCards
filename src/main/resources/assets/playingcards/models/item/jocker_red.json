@@ -1,7 +1,7 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "playingcards:items/plain_card",
-        "layer1": "playingcards:items/jocker/red"
-    }
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "playingcards:items/plain_card",
+    "layer1": "playingcards:items/jocker/red"
+  }
 }

@@ -1,8 +1,8 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "playingcards:items/plain_card",
-        "layer1": "playingcards:items/suits/spades/ace",
-        "layer2": "playingcards:items/black/ace"
-    }
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "playingcards:items/plain_card",
+    "layer1": "playingcards:items/suits/spades/ace",
+    "layer2": "playingcards:items/black/ace"
+  }
 }
