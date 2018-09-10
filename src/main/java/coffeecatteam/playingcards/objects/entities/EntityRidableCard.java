@@ -1,6 +1,5 @@
 package coffeecatteam.playingcards.objects.entities;
 
-import coffeecatteam.playingcards.Reference;
 import coffeecatteam.playingcards.init.InitItem;
 import com.mrcrayfish.vehicle.entity.EntityLandVehicle;
 import com.mrcrayfish.vehicle.init.ModItems;
