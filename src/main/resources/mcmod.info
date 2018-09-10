@@ -3,7 +3,7 @@
   "modid": "playingcards",
   "name": "Playing Cards",
   "description": "A little mod I made when I was bored. Learn to throw playing cards!",
-  "version": "2.0",
+  "version": "2.1",
   "mcversion": "${mcversion}",
   "url": "https://minecraft.curseforge.com/projects/playingcards",
   "authorList": ["CoffeeCatTeam"],
